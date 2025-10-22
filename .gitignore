@@ -1,49 +1,61 @@
-# Ignore virtual environments
+# -----------------------------
+# Virtual Environments
+# -----------------------------
 venv/
-model_weights.h5
-accident_records/
+.env/
+.venv/
+env/
 
-# Ignore Python cache
+# -----------------------------
+# Python Cache & Bytecode
+# -----------------------------
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+*.pkl
 
-
-# Ignore virtual environments
-venv/
-.env/
-
-# Ignore Python cache
-__pycache__/
-*.pyc
-
-# Ignore model and video files
+# -----------------------------
+# Model & Large Files
+# -----------------------------
 model_weights.h5
-model.json
-test_video.mp4
-*.avi
-*.mp4
-accident_records/
-
-# Ignore system and temp files
-.DS_Store
-Thumbs.db
-
-
-# Ignore model weights and large files
 *.h5
 *.hdf5
-*.json
+model.json
 
-# Ignore data, videos, and temp files
+# -----------------------------
+# Media / Data Files
+# -----------------------------
+test_video.mp4
 *.mp4
 *.avi
 accident_records/
+data/
+datasets/
+captures/
+screenshots/
 
-# Ignore IDE / Editor folders
+# -----------------------------
+# IDE / Editor Files
+# -----------------------------
 .vscode/
 .idea/
+*.sublime-project
+*.sublime-workspace
 
-# Ignore OS files
+# -----------------------------
+# OS & Temp Files
+# -----------------------------
 .DS_Store
 Thumbs.db
+*.log
+*.tmp
+
+# -----------------------------
+# Secrets & Credentials
+# -----------------------------
+*.env
+secrets.txt
+credentials.json
+*.pem
+*.key
