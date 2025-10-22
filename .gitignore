@@ -8,6 +8,28 @@ __pycache__/
 *.pyc
 *.pyo
 
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore model and video files
+model_weights.h5
+model.json
+test_video.mp4
+*.avi
+*.mp4
+accident_records/
+
+# Ignore system and temp files
+.DS_Store
+Thumbs.db
+
+
 # Ignore model weights and large files
 *.h5
 *.hdf5
