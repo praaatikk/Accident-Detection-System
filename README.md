@@ -1,50 +1,128 @@
-# Accident Detection System
+Accident Detection System (Enhanced Version)
 
-**Last Updated: *7 June 2022***
+Original Project by: @krishrustagi
 
-1. Demonstration
-2. What is Accident Detection System?
-3. Prerequisites
-4. Getting Started- How to use it?
-5. Description
-6. Future Work
+Modified and Enhanced by: Pratik Gadekar
+Last Updated: October 2025
 
-## 1. Demonstration
 
-![Demo](https://user-images.githubusercontent.com/54409969/173066273-732f7da9-8645-4809-aa7a-bb2f78548b3e.gif)
 
-## 2. What is Accident Detection System?
+--- Overview
 
-An accident Detection System is designed to detect accidents via video or CCTV footage. Road accidents are a significant problem for the whole world. Many people lose their lives in road accidents. We can minimize this issue by using CCTV accident detection. This repository majorly explores how CCTV can detect these accidents with the help of Deep Learning.
+This enhanced Accident Detection System uses Computer Vision (OpenCV) and Deep Learning (Keras + CNN) to detect accidents in real-time from a webcam or video footage.
 
-## 3. Prerequisites
+The system identifies accidents, records evidence, and automatically sends an alert email with a screenshot of the detected accident when the confidence level exceeds 90%.
 
-- To use this project Python Version > 3.6 is recommended.
-- To contribute to this project, knowledge of basic python scripting, Machine Learning, and Deep Learning will help.
 
-## 4. Getting Started - How to use it?
 
-### Clone this repository
 
-`https://github.com/krishrustagi/Accident-Detection-System.git`
+--- Demonstration
 
-To install all the packages required to run this python program
-`pip install -r requirements.txt`
+(You can later upload your own demo GIF or image here.)
 
-**Note:** This project requires a camera. So make sure you have a connected camera to your device. You can also use a downloaded video if not using a camera.
 
-### Run
-Before running the program, you need to run the `accident-classification.ipynb` file which will create the `model_weights.h5` file. Then, to run this python program, you need to execute the `main.py` python file.
 
-## 5. Description
 
-This program includes 4 things.
 
-1. `data`: Kaggle dataset on [Accident Detection from CCTV footage](https://www.kaggle.com/code/mrcruise/accident-classification/data).
-2. `accident-classification.ipynb`: This is a jupyter notebook that generates a model to classify the above data. This file generates two important files `model.json` and `model_weights.h5`.
-3. `detection.py`: This file loads the Accident Detection system with the help of `model.json` and `model_weights.h5` files.
-4. `camera.py`: It packs the camera and executes the `detection.py` file on the video dividing it frame by frame and displaying the percentage of the prediction in the accident (if present) in the frame.
+--- Features
 
-## 6. Future Work
+ Real-time accident detection from webcam or video
+ Email alert system with attached screenshot
+ Accident confidence threshold (90%)
+ Automatic screenshot storage (organized neatly inside accident_records/)
+ Alarm alert sound for immediate attention
+ Clean, modular Python code compatible with TensorFlow 2.x
 
-We can use an alarm system that can call the nearest police station in case of an accident and also alert them of the severity of the accident.
+
+
+
+
+---Technologies Used
+
+OpenCV – (Open Source Computer Vision Library) for image processing
+
+Keras / TensorFlow – for deep learning model loading and prediction
+
+NumPy & Pandas – for data manipulation
+
+SMTPLib – (Simple Mail Transfer Protocol Library) for sending alert emails
+
+Flask – for backend integration (optional, if you build a web interface later)
+
+
+
+
+
+---Folder Structure
+
+Accident-Detection-System/
+│
+├── accident-classification.ipynb   # Model training notebook
+├── model.json                      # Model architecture
+├── model_weights.h5                # Trained model weights
+├── camera.py                       # Video-based detection
+├── cam_webcam.py                   # Webcam-based detection with email alerts
+├── requirements.txt
+├── accident_records/               # Automatically stores accident screenshots
+└── README.md
+
+
+
+
+
+---How to Run the Project
+1️⃣ Clone the repository
+git clone https://github.com/praaatikk/Accident-Detection-System.git
+cd Accident-Detection-System
+
+2️⃣ Install requirements
+pip install -r requirements.txt
+
+3️⃣ Run the detection
+
+To use a webcam:
+
+python cam_webcam.py
+
+
+To use a video file:
+
+python camera.py
+
+==Email Alert Setup (Important)
+
+Enable 2-Step Verification on your Gmail account.
+
+Create an App Password under Security → App passwords.
+
+Copy the 16-character password.
+
+Replace it in the code where EMAIL_PASSWORD is defined.
+
+Use your email for SENDER_EMAIL and RECEIVER_EMAIL.
+
+
+
+
+---Future Enhancements
+
+   Integration with emergency services (automated SOS calls)
+   Real-time GPS-based accident location tracking
+   Web dashboard for visualizing accident statistics
+
+
+
+
+---Conclusion
+
+This project demonstrates how deep learning and computer vision can help improve road safety by automating accident detection and enabling faster emergency response.
+The added alert system ensures that no critical event goes unnoticed — helping save valuable time and lives.
+
+
+
+
+
+---Credits
+
+This project is based on the original work by @krishrustagi
+, with modifications and additional features (webcam integration, email alerts, auto-recording, and sound alerts) developed by Pratik Gadekar.

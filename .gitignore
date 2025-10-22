@@ -1,4 +1,25 @@
-*.ipynb_checkpoints
-*__pycache__
-/cars.mp4
-/model_weights.h5
+# Ignore virtual environments
+venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore model weights and large files
+*.h5
+*.hdf5
+*.json
+
+# Ignore data, videos, and temp files
+*.mp4
+*.avi
+accident_records/
+
+# Ignore IDE / Editor folders
+.vscode/
+.idea/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db

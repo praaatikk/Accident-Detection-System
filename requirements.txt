@@ -3,3 +3,5 @@ pandas
 opencv-python
 tensorflow
 keras
+Flask==3.0.0
+
