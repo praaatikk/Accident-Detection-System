@@ -6,12 +6,13 @@ from datetime import datetime
 import smtplib
 from email.message import EmailMessage
 
+
 # -----------------------------
 # Gmail configuration
 # -----------------------------
 SENDER_EMAIL = "YOUR EMAIL ID"
-RECEIVER_EMAIL = "YOUR EAIL ID"
-APP_PASSWORD = "16 digits password without spacing"
+RECEIVER_EMAIL = "YOUR EMAIL ID"
+APP_PASSWORD = "16 digits password it provides"
 
 def send_email_alert(image_path, prob):
     msg = EmailMessage()
