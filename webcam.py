@@ -9,9 +9,9 @@ from email.message import EmailMessage
 # -----------------------------
 # Gmail configuration
 # -----------------------------
-SENDER_EMAIL = "pratikksecondaryacc@gmail.com"
-RECEIVER_EMAIL = "pratikksecondaryacc@gmail.com"
-APP_PASSWORD = "xtbzqqbisteqltzw"
+SENDER_EMAIL = "YOUR EMAIL ID"
+RECEIVER_EMAIL = "YOUR EAIL ID"
+APP_PASSWORD = "16 digits password without spacing"
 
 def send_email_alert(image_path, prob):
     msg = EmailMessage()
